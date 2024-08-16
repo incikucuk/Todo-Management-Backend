@@ -1,7 +1,6 @@
 package com.ikucuk.Full_Stack_Todo_Management_Project.controller;
 
 import com.ikucuk.Full_Stack_Todo_Management_Project.dto.EmployeeDto;
-import com.ikucuk.Full_Stack_Todo_Management_Project.entity.Employee;
 import com.ikucuk.Full_Stack_Todo_Management_Project.service.EmployeeService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -13,7 +12,7 @@ import java.util.List;
 @CrossOrigin("*")
 @AllArgsConstructor
 @RestController
-@RequestMapping("/api/employee")
+@RequestMapping("/api/employees")
 public class EmployeeController {
     private EmployeeService employeeService;
 
@@ -46,10 +45,4 @@ public class EmployeeController {
        employeeService.deleteEmployee(employeeId);
        return ResponseEntity.ok("Employee deleted successfully!");
     }
-
-
-
-
-
-
 }
